@@ -1,27 +1,30 @@
-import java.util.Scanner;
 public class Herec {
-    static Scanner sc = new Scanner(System.in);
     private String jmeno;
     private int rokNarozeni;
-    private Herec[] poleHercu;
-    String kos;
 
-    public Herec[] getPoleHercu() {
-        return poleHercu;
+
+
+    public String getJmeno() {
+        return jmeno;
     }
 
-    public Herec() {
-        System.out.println("Pocet hercu ve filmu");
-        int x = sc.nextInt();
-        poleHercu = new Herec[x];
-        for (int i = 0; i < x; i++) {
-            System.out.println("Jmeno herce"+i);
-            jmeno = sc.nextLine();
-            System.out.println("Rok narozeni");
-            rokNarozeni = sc.nextInt();
-            kos = sc.nextLine();
-            poleHercu[i] = jmeno +", "+ rokNarozeni;
-        }
+    public int getRokNarozeni() {
+        return rokNarozeni;
+    }
+
+    public void setJmeno(String jmeno) {
+        this.jmeno = jmeno;
+    }
+
+    public void setRokNarozeni(int rokNarozeni) {
+        this.rokNarozeni = rokNarozeni;
+    }
+
+    public Herec(String jmeno, int rokNarozeni) {
+        this.jmeno = jmeno;
+        this.rokNarozeni = rokNarozeni;
+
+
     }
 
 }
